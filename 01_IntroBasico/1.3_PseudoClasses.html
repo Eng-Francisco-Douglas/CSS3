@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes e Pseudo-elementos</title>
+    <style>
+        /* Pseudo-classes */
+        a:hover {
+            color: red; /* Quando o mouse passa sobre o link */
+        }
+
+        a:visited {
+            color: purple; /* Link já visitado */
+        }
+
+        a:active {
+            color: green; /* Link no momento do clique */
+        }
+
+        input:focus {
+            border: 2px solid blue; /* Campo de texto em foco */
+        }
+
+        input:disabled {
+            background-color: lightgray; /* Campo desabilitado */
+        }
+
+        input:checked {
+            outline: 2px solid green; /* Checkbox ou radio selecionado */
+        }
+
+        input:required {
+            border: 2px dashed orange; /* Campo obrigatório */
+        }
+
+        input:optional {
+            border: 2px dotted gray; /* Campo opcional */
+        }
+
+        input:valid {
+            border: 2px solid green; /* Campo com valor válido */
+        }
+
+        input:invalid {
+            border: 2px solid red; /* Campo com valor inválido */
+        }
+
+        p:first-child {
+            font-weight: bold; /* Primeiro filho de um elemento pai */
+        }
+
+        p:last-child {
+            font-style: italic; /* Último filho de um elemento pai */
+        }
+
+        p:nth-child(2) {
+            color: blue; /* Segundo filho de um elemento pai */
+        }
+
+        p:nth-last-child(2) {
+            color: orange; /* Penúltimo filho de um elemento pai */
+        }
+
+        p:first-of-type {
+            text-decoration: underline; /* Primeiro do tipo */
+        }
+
+        p:last-of-type {
+            text-transform: uppercase; /* Último do tipo */
+        }
+
+        p:nth-of-type(2) {
+            color: green; /* Segundo do tipo */
+        }
+
+        p:nth-last-of-type(2) {
+            color: brown; /* Penúltimo do tipo */
+        }
+
+        p:only-child {
+            background-color: lightblue; /* Único filho */
+        }
+
+        p:only-of-type {
+            border: 1px solid black; /* Único do tipo */
+        }
+
+        div:empty {
+            background-color: lightgray; /* Elemento vazio */
+        }
+
+        p:not(.highlight) {
+            color: gray; /* Parágrafos que não têm a classe "highlight" */
+        }
+
+        li:nth-child(odd) {
+            background-color: #f0f0f0; /* Itens ímpares */
+        }
+
+        li:nth-child(even) {
+            background-color: #d0d0d0; /* Itens pares */
+        }
+
+        /* Pseudo-elementos */
+        p::before {
+            content: "Antes: "; /* Adiciona conteúdo antes do elemento */
+            color: red;
+        }
+
+        p::after {
+            content: " Depois."; /* Adiciona conteúdo depois do elemento */
+            color: blue;
+        }
+
+        p::first-letter {
+            font-size: 2em; /* Estiliza a primeira letra */
+            color: green;
+        }
+
+        p::first-line {
+            font-weight: bold; /* Estiliza a primeira linha */
+        }
+
+        input::placeholder {
+            color: gray; /* Estiliza o texto do placeholder */
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pseudo-classes e Pseudo-elementos</h1>
+    <a href="#">Link de exemplo</a>
+    <form>
+        <input type="text" placeholder="Digite algo" required>
+        <input type="text" placeholder="Opcional">
+        <input type="checkbox" checked>
+        <input type="radio" disabled>
+    </form>
+    <div>
+        <p class="highlight">Primeiro parágrafo destacado.</p>
+        <p>Segundo parágrafo.</p>
+        <p>Terceiro parágrafo.</p>
+    </div>
+    <div></div>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+</body>
+</html>

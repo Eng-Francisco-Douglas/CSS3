@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores CSS</title>
+    <style>
+        /* Seletor Universal */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Seletor de Tipo (Tag) */
+        h1 {
+            color: blue;
+        }
+
+        /* Seletor de Classe */
+        .highlight {
+            background-color: yellow;
+        }
+
+        /* Seletor de ID */
+        #main-title {
+            font-size: 24px;
+            text-align: center;
+        }
+
+        /* Seletor de Atributo */
+        [type="text"] {
+            border: 1px solid black;
+        }
+
+        /* Seletor de Descendentes */
+        div p {
+            color: green;
+        }
+
+        /* Seletor de Filho Direto */
+        div > p {
+            font-weight: bold;
+        }
+
+        /* Seletor de Irmão Adjacente */
+        h1 + p {
+            font-style: italic;
+        }
+
+        /* Seletor de Irmão Geral */
+        h1 ~ p {
+            color: gray;
+        }
+
+        /* Seletor de Grupo */
+        h1, p {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="main-title">Exemplo de Seletores CSS</h1>
+    <p class="highlight">Este é um parágrafo destacado.</p>
+    <div>
+        <p>Este parágrafo está dentro de uma div.</p>
+        <p>Outro parágrafo dentro da mesma div.</p>
+    </div>
+    <input type="text" placeholder="Campo de texto">
+    <p>Este é um parágrafo fora da div.</p>
+</body>
+</html>
