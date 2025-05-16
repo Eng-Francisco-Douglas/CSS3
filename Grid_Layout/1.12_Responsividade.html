@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            display: grid;
+            padding: 20px;
+            gap: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: aliceblue;
+
+            grid-template-areas: 
+                "cabecalho cabecalho cabecalho cabecalho"
+                "menu conteudo conteudo conteudo"
+                "anuncio conteudo conteudo conteudo"
+                "rodape rodape rodape rodape";
+        }
+
+        .cabecalho{
+            grid-area: cabecalho;
+        }
+        .menu{
+            grid-area: menu;
+            background-color: orange !important;
+        }
+        .conteudo{
+            grid-area: conteudo;
+            background-color: green !important;
+        }
+        .rodape{
+            grid-area: rodape;
+            background-color: rgb(180, 180, 228) !important;
+        }
+        .anucio{
+            grid-area: anuncio;
+            background-color: red !important;
+        }
+        
+
+        .item{
+            background-color: #738eb6;
+            color:#000;
+            text-align: center;
+            padding: 20px;
+            font-size: 20px;
+            border-radius: 2px;
+            box-shadow: 0 4px 5px #333;
+        }
+
+
+        @media (max-width: 600px) {
+            .container{
+                grid-template-areas: 
+                    "cabecalho cabecalho"
+                    "menu conteudo"
+                    "anuncio rodape";
+            }
+        }
+        @media screen and (max-width: 400px) {
+            .container{
+                grid-template-areas: 
+                    "cabecalho"
+                    "menu"
+                    "conteudo"
+                    "anuncio"
+                    "rodape";
+            }
+            
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+        <div class="item cabecalho">Cabeçalho</div>
+        <div class="item menu">Menu</div>
+        <div class="item conteudo">Conteudo</div>
+        <div class="item anucio">Anuncio</div>
+        <div class="item rodape">Rodape</div>
+   </div>
+</body>
+</html>

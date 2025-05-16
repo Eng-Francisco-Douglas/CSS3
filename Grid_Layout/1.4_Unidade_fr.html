@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            display: grid;
+            /* grid-template-columns: repeat(3, 1fr); */
+            /* grid-template-columns: 1fr 2fr 1fr 1fr; */
+            grid-template-columns: repeat(2, 200px) repeat(2, 1fr);
+            /* Utilize sempre que possivel o fr*/
+            padding: 20px;
+            gap: 10px;
+        }
+
+        .item{
+            background-color: #65b468;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 20px;
+            border-radius: 2px;
+            box-shadow: 0 4px 5px #333;
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+        <div class="item">Item 7</div>
+        <div class="item">Item 8</div>
+   </div>
+</body>
+</html>
